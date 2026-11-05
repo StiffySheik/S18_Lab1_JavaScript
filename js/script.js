@@ -21,14 +21,21 @@ function genererContenu() {
 function changerStyle() {
   // Obtenir les éléments p qui sont sous le div demo et changer la couleur spécifiée dans l'input
   const couleur = document.getElementById("couleur").value;
-  const lesD = document.getElementById("#demo");
+  const lesD = document.getElementById("demo"); // Suppression du '#'
   const lesP = lesD.getElementsByTagName("p");
 
   for (let i = 0; i < lesP.length; i++) {
-    paragraphes[i].style.color = couleur;
+    lesP[i].style.color = couleur;
   }
 }
   
 function changerClassBoutons() {
   // Obtenir les éléments boutons et changer leur className pour celui qui est spécifié dans l'input
+
+  const nouvelleClsse = document.getElementById("btnClass").value;
+  const boutons = document.getElementsByTagName("button")
+
+  for(let i = 0 ; i < boutons.length; i++){
+    boutons[i].className = nouvelleClsse
+  }
 }
